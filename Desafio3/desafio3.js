@@ -6,11 +6,11 @@ const app = express();
 
 
 app.get("/productos", (request, response)=>{
-    response.send(JSON.stringify(articulos.getAll(), null, 2));
+    response.send(articulos.getAll());
 })
 
 app.get("/productoRandom", (request, response)=>{
-    response.send(JSON.stringify(articulos.randomProd(), null, 2));
+    response.send(articulos.randomProd());
 })
 
 app.get("*", (request, response)=>{
