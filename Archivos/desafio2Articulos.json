@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "anteojos ray ban",
+    "price": 15000,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_713939-MLA49636746444_042022-O.webp"
+  },
+  {
+    "id": 2,
+    "title": "anillo Bulgari",
+    "price": 3500,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_732054-MLA49858468287_052022-O.webp"
+  },
+  {
+    "id": 3,
+    "title": "Reloj de acero",
+    "price": 18350,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_601779-MLA49874959748_052022-O.webp"
+  }
+]
