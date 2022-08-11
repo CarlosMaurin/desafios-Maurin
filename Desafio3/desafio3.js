@@ -5,12 +5,14 @@ const articulos = new Desafio2Articulos();
 const app = express();
 
 
-app.get("/productos", (request, response)=>{
-    response.send(articulos.getAll());
+app.get("/productos", async (request, response)=>{
+    const productos = await articulos.nombreProd();
+    response.send(`Estos son los productos: ${productos}`);
 })
 
-app.get("/productoRandom", (request, response)=>{
-    response.send(articulos.randomProd());
+app.get("/productoRandom", async (request, response)=>{
+    const randProd = await articulos.randomProd();
+    response.send(`El producto random es: ${randProd}`);
 })
 
 app.get("*", (request, response)=>{
