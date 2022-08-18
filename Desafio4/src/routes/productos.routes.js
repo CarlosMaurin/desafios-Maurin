@@ -62,13 +62,13 @@ routerProductos.put("/:id", (req, res)=>{
 routerProductos.delete("/:id", (req, res)=>{
     try {
         const id = req.params.id;
-        const eliminarProducto = DB_PRODUCTOS.findIndex(ind => ind.id == id);
+        const eliminarProducto = DB_PRODUCTOS.find(ind => ind.id == id);
 
-        if(eliminarProducto == -1){
+        if(eliminarProducto == undefined){
         res.status(404).json({Error: "producto no encontrado"});
         }else{
             DB_PRODUCTOS.splice(eliminarProducto, 1);
-            res.status(201).json({msg: "Producto eliminado con éxito"});
+            res.status(201).json(eliminarProducto);
         }
     } catch (error) {
         res.status(500).json({
